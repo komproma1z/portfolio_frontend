@@ -1,5 +1,5 @@
 <template>
-  <v-container v-if="dataLoaded" fill-height>
+  <v-container v-if="!dataLoaded" fill-height>
     <v-row>
       <v-col class="text-center">
         <v-progress-circular
