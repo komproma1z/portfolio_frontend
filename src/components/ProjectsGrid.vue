@@ -1,5 +1,16 @@
 <template>
-  <v-container class="grey lighten-5" v-if="dataLoaded" fluid>
+  <v-container v-if="dataLoaded" fill-height>
+    <v-row>
+      <v-col class="text-center">
+        <v-progress-circular
+        indeterminate
+        color="primary"
+        ></v-progress-circular>
+      </v-col>
+    </v-row>
+    
+  </v-container>
+  <v-container class="grey lighten-5" v-else fluid>
     <v-row>
       <v-col
         v-for="project in projects" :key="project.id"
